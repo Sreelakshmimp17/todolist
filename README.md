@@ -60,7 +60,6 @@ Task included
 
 
 
----
 Made with ❤️ at TinkerHub Tink Her Hack 3.0
 
 ![Static Badge](https://img.shields.io/badge/TinkerHub-24?color=%23000000&link=https%3A%2F%2Fwww.tinkerhub.org%2F)
