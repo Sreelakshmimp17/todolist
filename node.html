@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>My Notes</h1>
+            <input type="text" id="search" placeholder="Search notes...">
+        </header>
+        <main>
+            <div class="toolbar">
+                <button onclick="setFontSize('small')">A-</button>
+                <button onclick="setFontSize('large')">A+</button>
+                <button onclick="toggleUnderline()">U</button>
+                <button onclick="highlightText()">Highlight</button>
+                <select id="fontSelect" onchange="changeFont()">
+                    <option value="Arial">Arial</option>
+                    <option value="Courier New">Courier New</option>
+                    <option value="Times New Roman">Times New Roman</option>
+                </select>
+                <button onclick="toggleTheme()">Switch Theme</button>
+                <button id="micButton">🎙️ Voice Note</button>
+            </div>
+            <div class="notes-list">
+                <textarea class="note" placeholder="Write your note here..." oninput="saveNotes(this)"></textarea>
+                <button onclick="addToFavorites(this)">⭐</button>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+    <a href="index.html">
+        <button>previous</button>
+    </a>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="app-container">
+    <header>
+      <h1>To-Do List</h1>
+      <button id="theme-toggle">Toggle Dark/Light Theme</button>
+    </header>
+    <img class="todo" src="todo.jpg" alt="" >
+    <div id="todo-form">
+      <input type="text" id="todo-input" placeholder="Enter a task">
+      <select id="category-select">
+        <option value="personal">Personal</option>
+        <option value="work">Work</option>
+        <option value="other">Other</option>
+      </select>
+      <button id="add-btn">Add</button>
+    </div>
+    <div class="stats">
+      <p>Tasks Completed: <span id="completed-percent">0%</span></p>
+      <p>Remaining Tasks: <span id="remaining-tasks">0</span></p>
+    </div>
+    <ul id="todo-list"></ul>
+  </div>
+  <script src="script.js"></script>
+  
+  
+  <title>To-Do List with Feedback</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; background: #f9f9f9; }
+    .task { display: flex; justify-content: space-between; margin: 10px 0; }
+    .completed { text-decoration: line-through; color: green; }
+    .feedback { margin-top: 20px; color: blue; display: none; }
+  </style>
+</head>
+<body>
+  
+  <ul id="tasks">
+      <li class="task"><span>Finish the task</span> <button onclick="completeTask(this)">Complete</button></li>
+    
+  </ul>
+  <div id="feedback" class="feedback"></div>
+  <script>
+    const feedbackMessages = ["Great job!", "Keep going!", "You're amazing!"];
+    function completeTask(button) {
+      const task = button.parentElement;
+      task.classList.add("completed");
+      button.remove();
+      const feedback = document.getElementById("feedback");
+      feedback.textContent = feedbackMessages[Math.floor(Math.random() * feedbackMessages.length)];
+      feedback.style.display = "block";
+      setTimeout(() => feedback.style.display = "none", 2000);
+    }
+    
+  </script>
+  <a href="node.html">
+    <button>Next</button>
+</a>
+</body>
+
+</html>
