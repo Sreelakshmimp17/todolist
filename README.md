@@ -58,10 +58,6 @@ Home page 2
 https://github.com/Sreelakshmimp17/todolist/blob/main/Screenshot%20(4).png
 Task included
 
-# Diagrams
-![Workflow](Add your workflow/architecture diagram here)
-*Add caption explaining your workflow*
-
 
 
 ---
